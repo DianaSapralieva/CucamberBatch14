@@ -1,4 +1,4 @@
-/*package CucumberTool;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,8 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class StepDefClass {
-
+public class LoginSteps {
     WebDriver driver;
     @Given("user is navigated to HRM application")
     public void user_is_navigated_to_hrm_application() {
@@ -43,13 +42,11 @@ public class StepDefClass {
 
     @Then("user is successfully logged in")
     public void user_is_successfully_logged_in() {
-       WebElement welcomeMessage= driver.findElement(By.id("welcome"));
-       if(welcomeMessage.isDisplayed()){
-           System.out.println("passed");
-       }else{
-           System.out.println("not passed");
-       }
+        WebElement welcomeMessage = driver.findElement(By.id("welcome"));
+        if (welcomeMessage.isDisplayed()) {
+            System.out.println("passed");
+        } else {
+            System.out.println("not passed");
+        }
     }
-
 }
-*/
